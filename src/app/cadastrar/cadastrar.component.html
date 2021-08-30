@@ -5,61 +5,56 @@
 
         <div class="col -md6 mt-5 mb-5">
 
-            <div class="row d-flex justify-content-center">
-                <div class="col-md-10">
-                    <h1 class="text-center">Cadastro</h1>
+        <div class="row d-flex justify-content-center">  <div class="col-md-10">
+      <h1 class="text-center">Cadastro</h1>
 
-                    <div class="form-group">
-                        <label for="Nome">Nome</label>
-                        <input class="form-control" type="text" name="Nome" id="Nome"
-                        placeholder="Digite Seu Nome">
-                    </div>
-                    
-
-                    <div class="form-group">
-                        <label for="Email">Email</label>
-                        <input class="form-control" type="text" name="Email" id="usuario"
-                        placeholder="Digite Seu Email">
-                    </div>
-
-                    <div class="form-group">
-                        <label for="Senha">Senha</label>
-                        <input class="form-control" type="password" name="Senha" id="Senha"
-                        placeholder="Digite Sua Senha">
-                    </div>
-
-                    <div class="form-group">
-                        <label for="ConfirmarSenha">Confirmar Senha</label>
-                        <input class="form-control" type="password" name="ConfirmarSenha" id="ConfirmarSenha"
-                        placeholder="Comfirme Sua Senha">
-                    </div>
-
-                    <div class="form-group">
-                        <label for="foto">Link da foto</label>
-                        <input class="form-control" type="text" name="foto" id="foto"
-                        placeholder="Coloque o Link da Sua Foto">
-
-                        <div class="form-group">
-                            <label for="tio">Tipo de Usuário</label>
-                            <select class="form-control" name="tipo" id="tipo">
-                            <option>Selecione um tipo de Usuário:</option>
-                            <option value="normal">Normal</option>
-                            <option value="adm">Administrador</option>
-                        </select>
-                        </div>
-                        <div class="d-flex justify-content-center">
-                            <button type="submit" class="btn btn-danger m-3" routerLink="/entrar">Cancelar</button>
-                            <button type="submit" class="btn btn-success m-3">Cadastrar</button>
-
-
-
-                        </div>
-                    </div>
-                </div>
-
+   <div class="form-group">
+     <label for="Nome">Nome</label>          
+       <input [(ngModel)] = "usuario.nome" class = "form-control"
+       type="text" name="nome" id="nome" placeholder="Digite Seu nome"
+       >
             </div>
+   <div class="form-group">
+          <label for="Email">Email</label>
+               <input [(ngModel)]="usuario.Email" class="form-control" type="text" name="Email" id="usuario"
+           placeholder="Digite Seu Email / usuario">
+         </div>
 
+   <div class="form-group">
+    <label for="Senha">Senha</label>
+   <input (input)="ConfirmarSenha($event)" class="form-control" type="password" 
+   name="Senha" id="Senha"placeholder="Digite Sua Senha">
         </div>
+           <div class="form-group">
+              <label for="ConfirmarSenha">Confirmar Senha</label>
+            <input [(ngModel)]="usuario.Senha" class="form-control" type="password" name="ConfirmarSenha" id="ConfirmarSenha"
+         placeholder="Comfirme Sua Senha">
+                    </div>
+
+    <div class="form-group">
+         <label for="foto">Link da foto</label>
+         <input [(ngModel)]="usuario.foto" class="form-control" type="text" name="foto" id="foto"
+    placeholder="Coloque o Link da Sua Foto">
+
+    <div class="form-group">
+  <label for="tio">Tipo de Usuário</label>
+  <select class="form-control" name="tipo" id="tipo" (change)=" tipoUser($event)">
+   <option>Selecione um tipo de Usuário:</option>
+   <option value="normal">Normal</option>
+  <option value="adm">Administrador</option>
+    </select>
+                        </div>
+     <div class="d-flex justify-content-center">
+                            <button type="submit" class="btn btn-danger m-3" routerLink="/entrar">Cancelar</button>
+  <button type="submit" class="btn btn-success m-3" (click)="Cadastrar()"> Cadastrar</button>
+
+
+    </div>
+     </div>
+   </div>
+
+</div>
+ </div>
 
     </div>
 
