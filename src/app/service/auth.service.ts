@@ -12,12 +12,12 @@ export class AuthService {
   constructor(private http: HttpClient) { }
 
   entrar (userLogin: userLogin): Observable<userLogin>{
-  return this.http.post<userLogin>('http://localhost;8080/usuario/logar',userLogin)
+  return this.http.put<userLogin>('https://stelviosmith.herokuapp.com/api/v1/usuario/autenticar',userLogin)
 
   }
 
   cadastrar (user: usuario): Observable<usuario> {
-    return this.http.post<usuario>('http://localhost;8080/usuario/cadastrar',usuario)
+    return this.http.post<usuario>('https://stelviosmith.herokuapp.com/api/v1/usuario/salvar',user)
 
   }
 }

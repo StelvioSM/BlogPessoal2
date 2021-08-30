@@ -16,18 +16,18 @@
             </div>
    <div class="form-group">
           <label for="Email">Email</label>
-               <input [(ngModel)]="usuario.Email" class="form-control" type="text" name="Email" id="usuario"
+               <input [(ngModel)]="usuario.email" class="form-control" type="text" name="Email" id="usuario"
            placeholder="Digite Seu Email / usuario">
          </div>
 
    <div class="form-group">
     <label for="Senha">Senha</label>
-   <input (input)="ConfirmarSenha($event)" class="form-control" type="password" 
+   <input (input)="confirmeSenha($event)" class="form-control" type="password" 
    name="Senha" id="Senha"placeholder="Digite Sua Senha">
         </div>
            <div class="form-group">
               <label for="ConfirmarSenha">Confirmar Senha</label>
-            <input [(ngModel)]="usuario.Senha" class="form-control" type="password" name="ConfirmarSenha" id="ConfirmarSenha"
+            <input [(ngModel)]="usuario.senha" class="form-control" type="password" name="ConfirmarSenha" id="ConfirmarSenha"
          placeholder="Comfirme Sua Senha">
                     </div>
 
@@ -38,7 +38,7 @@
 
     <div class="form-group">
   <label for="tio">Tipo de Usuário</label>
-  <select class="form-control" name="tipo" id="tipo" (change)=" tipoUser($event)">
+  <select class="form-control" name="tipo" id="tipo" (change)="tipoUser($event)">
    <option>Selecione um tipo de Usuário:</option>
    <option value="normal">Normal</option>
   <option value="adm">Administrador</option>
@@ -46,7 +46,7 @@
                         </div>
      <div class="d-flex justify-content-center">
                             <button type="submit" class="btn btn-danger m-3" routerLink="/entrar">Cancelar</button>
-  <button type="submit" class="btn btn-success m-3" (click)="Cadastrar()"> Cadastrar</button>
+  <button class="btn btn-success m-3" (click)="cadastrar()"> Cadastrar</button>
 
 
     </div>
