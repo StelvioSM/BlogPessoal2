@@ -38,6 +38,7 @@ export class CadastrarComponent implements OnInit {
   cadastrar(){
 
     this.usuario.tipo= this.tipousuario
+    console.log("usuario cadastrar "+JSON.stringify(this.usuario))
     if(this.usuario.senha != this.confirmarSenha ){
 
       alert("A senha estão Diferentes")

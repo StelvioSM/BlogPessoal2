@@ -3,6 +3,13 @@
     font-size: 18pt;
 }
 
+.nav-bar-color{
+    background-image: url(../../assets/img/dddddd.jpg);
+    min-height: 71px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 a
 {
 cursor: pointer;
